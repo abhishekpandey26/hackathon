@@ -1,0 +1,21 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url('background-image.jpg'); /* Replace 'background-image.jpg' with your actual image path */
+    background-size: cover;
+    background-position: center;
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust the alpha value for transparency */
+}
+
+.container {
+    text-align: center;
+    width: 300px; /* Adjust the width as needed */
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+    padding: 20px;
+    border-radius: 10px;
+}

@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page with Aluminum Track System</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            animation: flashBackground 9s infinite; /* Adjust the duration as needed */
+        }
+
+        @keyframes flashBackground {
+            0%, 20% {
+                background-image: url('https://www.targetadmission.com/img/colleges/newc/7758-755617.jpg');
+            }
+            20%, 40% {
+                background-image: url('https://media.licdn.com/dms/image/D5622AQFQvZt1eAkA6Q/feedshare-shrink_800/0/1703912364325?e=1707350400&v=beta&t=Ah0nkAPOA76Qxoz4l2LsvvVHN9d9iBzHmXkSxUdPN_g');
+            }
+            40%, 60% {
+                background-image: url('https://www.targetadmission.com/img/colleges/newc/7759-600228.jpg');
+            }
+            60%, 80% {
+                background-image: url('https://media.licdn.com/dms/image/D5622AQFQvZt1eAkA6Q/feedshare-shrink_800/0/1703912364325?e=1707350400&v=beta&t=Ah0nkAPOA76Qxoz4l2LsvvVHN9d9iBzHmXkSxUdPN_g');
+            }
+            80%, 100% {
+                background-image: url('https://media.licdn.com/dms/image/D5622AQFxU7k9_Vd95g/feedshare-shrink_800/0/1704040161768?e=1707350400&v=beta&t=IxjwBPPd_DNn1L9ZW5ObNot0I6FWCnMO7xNuCGaiDE8');
+            }
+        }
+        h1{
+            text-align: center;
+            color: #fff;
+        }
+        header {
+            position:fixed;
+            background-color: transparent;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            border-bottom: 1px solid #3498db;
+        }
+
+        nav {
+            background-color: rgba(44, 62, 80, 0.8);
+            overflow: hidden;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        nav a {
+            float: left;
+            display: block;
+            color: #ecf0f1;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: rgba(52, 73, 94, 0.8);
+        }
+
+        .menu-icon {
+            display: none;
+            float: right;
+            cursor: pointer;
+            padding: 14px 16px;
+        }
+
+        .menu-links {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            transition: display 0.3s ease;
+        }
+
+        .menu-links a {
+            display: block;
+            text-align: left;
+        }
+
+        .track-container {
+            width: 80%;
+            margin: auto;
+            position: relative;
+            height: 50px;
+            background-color: rgba(240, 240, 240, 0.9);
+            border-radius: 10px;
+            overflow: hidden;
+            margin-top: 20px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .track-progress {
+            height: 100%;
+            width: 50%;
+            background-color: rgba(52, 152, 219, 0.8);
+            border-radius: 10px;
+            transition: width 0.5s ease;
+        }
+
+        .content {
+            text-align: center;
+            padding: 20px;
+            color: #fff;
+            height: 500px;
+            overflow-y: auto;
+        }
+
+        .content h2 {
+            color: #3498db;
+        }
+
+        .content p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-top: 20px;
+        }
+
+        .notification-container {
+            background-color: rgba(44, 62, 80, 0.8);
+            color: #ecf0f1;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 20px;
+            display: none;
+        }
+
+        .notification {
+            animation: flashNotification 1s infinite alternate; /* Adjust the duration as needed */
+        }
+
+        @keyframes flashNotification {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0;
+            }
+        }
+
+        footer {
+            background-image: url('https://mapsystems-partners-assets.s3.ap-south-1.amazonaws.com/626e2ff2fa9727468ef756a5/logo/1652675870107-d0245297-2679-4cf2-a82e-0d717e15391c.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #060a0b;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            height: 80px;
+            transition: height 0.5s ease;
+        }
+
+        .footer-text {
+            color: #3498db; /* Change the color as needed */
+        }
+
+        @media only screen and (max-width: 600px) {
+            nav a {
+                display: none;
+            }
+
+            .menu-icon {
+                display: block;
+            }
+
+            .menu-links {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .menu-links a {
+                display: block;
+                text-align: left;
+            }
+
+            .footer-text {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    
+        <h1>PESCE Alumni Hub</h1>
+    
+
+    <nav>
+        <div class="menu-icon">&#9776; Menu</div>
+        <div class="menu-links">
+            <a href="#home">Home</a>
+            <a href="#about">About Us</a>
+            <a href="#contact">Contact Us</a>
+            <a href="http://127.0.0.1:5500/register.html">Register</a>
+            <a href="http://127.0.0.1:5500/index.html">Login</a>
+            <a href="#" onclick="showNotification()">New Event</a>
+        </div>
+    </nav>
+
+    
+
+    <div class="content" id="home">
+        <div class="notification-container" id="notificationContainer">
+            <div class="notification" id="notification1">Notification 1: Lorem ipsum dolor sit amet.</div>
+            <div class="notification" id="notification2">Notification 2: Consectetur adipiscing elit.</div>
+            <div class="notification" id="notification3">Notification 3: Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+            <div class="notification" id="notification4">Notification 4: Ut enim ad minim veniam.</div>
+            <div class="notification" id="notification5">Notification 5: Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+            <div class="notification" id="notification6">Notification 6: Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</div>
+        </div>
+    </div>
+
+    <footer>
+        <div>
+            <h2>About Us</h2>
+            <p>Welcome to Pes college of engineering Alumni, where memories thrive, and connections endure. Discover the journey that unites us beyond the campus gates. Our story is written by the countless achievements of our alumni. Explore the chapters of success, resilience, and camaraderie that define the legacy of Pes college.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelector('.menu-icon').addEventListener('click', function() {
+            document.querySelector('.menu-links').style.display = (document.querySelector('.menu-links').style.display === 'flex') ? 'none' : 'flex';
+        });
+
+        function showNotification() {
+            document.getElementById('notificationContainer').style.display = 'flex';
+            animateNotifications();
+        }
+
+        function animateNotifications() {
+            var notifications = document.querySelectorAll('.notification');
+            notifications.forEach(function (notification, index) {
+                setTimeout(function () {
+                    notification.style.display = 'block';
+                }, index * 2000); // Adjust the delay as needed
+            });
+        }
+
+        window.onscroll = function() {
+            var footer = document.querySelector('footer');
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                footer.style.bottom = "0";
+                footer.style.height = "80px";
+            } else {
+                footer.style.bottom = "-80px";
+                footer.style.height = "80px";
+            }
+        };
+    </script>
+</body>
+</html>
